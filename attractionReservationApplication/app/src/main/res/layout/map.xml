@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--맵 위에있는 레이아웃-->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:id="@+id/top_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--오름차순 표로 가는 버튼-->
+            <!--모든 놀이기구의 이름을 표시 하는 버튼-->
+            <Button
+                android:id="@+id/View_in_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약 표"
+                android:textStyle="bold"></Button>
+            <Button
+                android:id="@+id/View_in_name"
+                android:text="놀이기구 이름보기"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+            <Button
+                android:id="@+id/show_QR"
+                android:text="QR코드"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+            <Button
+                android:id="@+id/map_Button_Checkwating"
+                android:text="현재 남은시간 확인"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Button>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--마지막에 추가된 자식이 가장 위에 표시-->
+            <FrameLayout
+                android:id="@+id/map_FrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--배경 화면이 되는 에버랜드 지도-->
+                <ImageView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="734dp"
+                    android:adjustViewBounds="true"
+                    android:padding="0dp"
+                    android:src="@drawable/map"></ImageView>
+                <!--호러메이즈 버튼-->
+                <Button
+                    android:id="@+id/Horror_Maze"
+                    android:layout_marginLeft="232dp"
+                    android:layout_marginTop="215dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--호러메이즈 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/Horror_Maze_sign"
+                    android:layout_marginLeft="192dp"
+                    android:layout_marginTop="195dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="호러메이즈"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--T코스터 버튼-->
+                <Button
+                    android:id="@+id/T_coaster"
+                    android:layout_marginLeft="295dp"
+                    android:layout_marginTop="224dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--T코스터 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/T_coaster_sign"
+                    android:layout_marginLeft="255dp"
+                    android:layout_marginTop="204dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="T코스터"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--알파인 카니발 버튼-->
+                <Button
+                    android:id="@+id/alpine_carnival"
+                    android:layout_marginLeft="256dp"
+                    android:layout_marginTop="244dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--알파인 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/alpine_carnival_sign"
+                    android:layout_marginLeft="216dp"
+                    android:layout_marginTop="224dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="알파인카니발"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--스페이스 투어 버튼-->
+                <Button
+                    android:id="@+id/space_tour"
+                    android:layout_marginLeft="369dp"
+                    android:layout_marginTop="323dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--스페이스 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/space_tour_sign"
+                    android:layout_marginLeft="329dp"
+                    android:layout_marginTop="303dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="스페이스 투어"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--슈팅 고스트 버튼-->
+                <Button
+                    android:id="@+id/shooting_ghost"
+                    android:layout_marginLeft="390dp"
+                    android:layout_marginTop="289dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--슈팅 고스트 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/shooting_ghost_sign"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="269dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="슈팅 고스트"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--레이니 마법 학교 버튼-->
+                <Button
+                    android:id="@+id/magic_school"
+                    android:layout_marginLeft="396dp"
+                    android:layout_marginTop="303dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--레이니 마법 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/magic_school_sign"
+                    android:layout_marginLeft="356dp"
+                    android:layout_marginTop="283dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="레이니 마법 학교"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--쥬빌리 카니발 버튼-->
+                <Button
+                    android:id="@+id/jubilee_carnival"
+                    android:layout_marginLeft="561dp"
+                    android:layout_marginTop="202dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--쥬빌리 카니발 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/jubilee_carnival_sign"
+                    android:layout_marginLeft="521dp"
+                    android:layout_marginTop="182dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="쥬빌리 카니발"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--회전목마 버튼-->
+                <Button
+                    android:id="@+id/Merry_go_round"
+                    android:layout_marginLeft="561dp"
+                    android:layout_marginTop="174dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--회전목마 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/Merry_go_round_sign"
+                    android:layout_marginLeft="521dp"
+                    android:layout_marginTop="154dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="회전목마"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--스카이 댄싱 버튼-->
+                <Button
+                    android:id="@+id/sky_dancing"
+                    android:layout_marginLeft="592dp"
+                    android:layout_marginTop="167dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--스카이 댄싱 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/sky_dancing_sign"
+                    android:layout_marginLeft="552dp"
+                    android:layout_marginTop="147dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="스카이댄싱"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--범퍼카 댄싱 버튼-->
+                <Button
+                    android:id="@+id/bumper_car"
+                    android:layout_marginLeft="604dp"
+                    android:layout_marginTop="204dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--범퍼카 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/bumper_car_sign"
+                    android:layout_marginLeft="564dp"
+                    android:layout_marginTop="184dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="범퍼카"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--매직스윙 댄싱 버튼-->
+                <Button
+                    android:id="@+id/Magic_swing_dancing"
+                    android:layout_marginLeft="628dp"
+                    android:layout_marginTop="148dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--매직스윙 댄싱 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/Magic_swing_dancing_sign"
+                    android:layout_marginLeft="588dp"
+                    android:layout_marginTop="128dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="매직스윙 댄싱"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--매직쿠키 하우스 버튼-->
+                <Button
+                    android:id="@+id/Magic_Cookie_House"
+                    android:layout_marginLeft="647dp"
+                    android:layout_marginTop="159dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--매직쿠키 하우스 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/Magic_Cookie_House_sign"
+                    android:layout_marginLeft="607dp"
+                    android:layout_marginTop="139dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="매직쿠키 하우스"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--피터팬 버튼-->
+                <Button
+                    android:id="@+id/Peter_Pan"
+                    android:layout_marginLeft="656dp"
+                    android:layout_marginTop="176dp"
+                    android:layout_width="10dp"
+                    android:layout_height="22dp"></Button>
+                <!--피터팬 댄싱 버튼의 이름 표-->
+                <Button
+                    android:id="@+id/Peter_Pan_sign"
+                    android:layout_marginLeft="616dp"
+                    android:layout_marginTop="156dp"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:visibility="gone"
+                    android:padding="0dp"
+                    android:background="#80A9A9A9"
+                    android:text="피터팬"
+                    android:textSize="9dp"
+                    android:textStyle="bold"></Button>
+                <!--예약에 필요한 레이아웃-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/LL_ride"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/LL_ride_waiting_person"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="대기인원"></Button>
+                        <Button
+                            android:id="@+id/LL_ride_waiting_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="대기시간"></Button>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/LL_ride_reservation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="예약하기"></Button>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

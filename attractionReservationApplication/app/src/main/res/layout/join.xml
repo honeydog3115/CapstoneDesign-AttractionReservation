@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:textSize="100px"
+        android:gravity="center"
+        android:text="회원가입"></TextView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50px"
+                android:textSize="70px"
+                android:text="이름"
+                ></TextView>
+            <EditText
+                android:id="@+id/Edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="이름을 입력하시오"
+                ></EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50px"
+                android:textSize="70px"
+                android:text="아이디"
+                ></TextView>
+            <EditText
+                android:id="@+id/Edit_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="아이디를 입력하시오"
+                ></EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50px"
+                android:textSize="70px"
+                android:text="비밀번호"
+                ></TextView>
+            <EditText
+                android:id="@+id/Edit_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호를 입력하시오"
+                ></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/join_Liner_ride"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60px"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50px"
+                android:textSize="70px"
+                android:text="담당 놀이기구"
+                ></TextView>
+            <EditText
+                android:id="@+id/join_EditText_ride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="담당 놀이기구를 입력하시오"
+                ></EditText>
+        </LinearLayout>
+
+
+
+        <RadioGroup
+            android:id="@+id/check_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/radio_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용자"></RadioButton>
+            <RadioButton
+                android:id="@+id/radio_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="관리자"></RadioButton>
+
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/join_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="완료"></Button>
+    <Button
+        android:id="@+id/join_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="뒤로가기"></Button>
+</LinearLayout>
